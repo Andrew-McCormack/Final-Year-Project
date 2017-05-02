@@ -1,0 +1,22 @@
+1. This project requires a valid installation of either XAMP or LAMP. Python 2.7 will also need to be installed.
+
+2. Ensure both Apache and PhpMyAdmin are running
+
+
+2. To create the database required for word-response structures, please navigate to the location of the MySQL/bin directory
+   that was setup with the XAMP / LAMP installation. Copy the file DatabaseCreate.sql into this directory and and enter the following command: "mysql -u root -p <password>" (default password is blank)
+   Once inside the MySQL shell, run the command: "CREATE DATABASE wordfrequencylookup;", followed by the command "USE wordfrequencylookup;". Then enter the command "SOURCE DatabaseCreate.sql;"
+   
+3. Copy the folder "htdocs" into the XAMP root directory. Please note that if you are using the default credentials for
+   the XAMP MySQL installation, these will have to be provided in the file "htdocs\WordFrequencyLookup\db_wordfrequencylookup.php
+
+3. If you wish to use your own subtitles, this can be done by placing the subtitles in the "FYP Source Code\Batch Word Response Generator\Subs" directory
+   and then running the "FYP Source Code\Batch Word Response Generator\RunBatchResponseGenerator.py" script.
+
+4. If you wish to use the provided SQL file which contains data from 500 subtitles, navigate to the location of the MySQL/bin directory
+   that was setup with the XAMP / LAMP installation. Copy the file "zero-to-five-hundred.sql" into this directory and and enter the following command: "mysql -u root -p <password>" (default password is blank)
+   Once inside the MySQL shell, run the command: "Source zero-to-five-hundred.sql;"
+
+5. To run the Conversational Agent Client, navigate into the "Conversational Agent Client" directory and install of all of the python plugins
+   contained within requirements.txt. The client can then be run by simply entering "python __init__.py" and navigating
+   to localhost:8080 in your browser.

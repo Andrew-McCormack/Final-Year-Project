@@ -1,0 +1,7 @@
+Flask
+Flask-SocketIO
+gevent
+gevent-websocket
+requests
+simplejson
+beautifulsoup
